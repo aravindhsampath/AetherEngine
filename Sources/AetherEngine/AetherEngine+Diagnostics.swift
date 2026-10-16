@@ -582,6 +582,8 @@ extension AetherEngine {
 
     /// Cumulative encoded-audio bytes the bridge has emitted this session. Zero when bridge is not active
     /// (stream-copy path or video-only source). The telemetry sampler diffs it into a live bridge output bitrate.
+    var objectAudioActivity: ObjectAudioActivity? { nativeVideoSession?.objectAudioActivity }
+
     var audioBridgeOutputBytesLifetime: Int64 {
         nativeVideoSession?.audioBridgeOutputBytesLifetime ?? 0
     }
